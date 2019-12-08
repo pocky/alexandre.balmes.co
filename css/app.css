@@ -1,0 +1,38 @@
+header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+body {
+    width: 50%;
+    margin: auto;
+}
+
+ul {
+    width: 70%;
+    margin: 80px auto;
+    display: flex;
+    list-style: none;
+}
+
+li {
+    padding: 0 10px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    html {
+        font-size: 250%;
+    }
+
+    body {
+        width: 70%;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    body {
+        width: 70%;
+    }
+}
