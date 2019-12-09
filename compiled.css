@@ -573,14 +573,14 @@ body {
 }
 
 ul {
-    width: 70%;
-    margin: 80px auto;
-    display: flex;
+    text-align: center;
     list-style: none;
+    padding: 0;
 }
 
 li {
     padding: 0 10px;
+    display: inline-block;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
