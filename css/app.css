@@ -8,15 +8,27 @@ body {
     margin: auto;
 }
 
-ul {
+ul, dl {
     text-align: center;
     list-style: none;
     padding: 0;
 }
 
-li {
+li, dt {
     padding: 0 10px;
     display: inline-block;
+}
+
+dd {
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+ul#social {
+    position: absolute;
+    width: 50%;
+    bottom: 10px;
+    margin: 0 auto;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
