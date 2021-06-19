@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 DOCKER?=docker
 DOCKER_COMPOSE?=docker-compose
-EXECJS?=$(DOCKER) run -it --rm --name akawaka_node -v "$(shell pwd)/":/home/node/app -w /home/node/app node:buster-slim
+EXECJS?=$(DOCKER) run -it --rm --name alexandre_node -v "$(shell pwd)/":/home/node/app -w /home/node/app node:buster-slim
 
 ##
 ## Project setup
@@ -22,7 +22,7 @@ stop: ## Do nothing
 reset: clear build ## Stop clear and install
 
 clear: stop ## clear project
-	rm -Rf node_modules npm-cache public/build
+	rm -Rf node_modules npm-cache docs/build
 	rm docker-dev.lock
 
 ##
@@ -57,7 +57,7 @@ node_modules: package-lock.json
 package-lock.json: package.json
 	@echo JS vendors are not up to date.
 
-public/build: assets
+docs/build: assets
 
 ##
 ## Utilities

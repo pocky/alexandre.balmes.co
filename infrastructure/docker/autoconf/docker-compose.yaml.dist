@@ -1,0 +1,15 @@
+version: '3.8'
+
+networks:
+  backend: ~
+
+services:
+  nginx:
+    image: nginx:1.19
+    volumes:
+      - "./infrastructure/docker/nginx/conf.d:/etc/nginx/conf.d:ro"
+      - "./docs:/var/www/html/docs:ro"
+    ports:
+      - "80:80"
+    networks:
+      backend: ~
