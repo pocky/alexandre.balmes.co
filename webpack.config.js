@@ -7,10 +7,13 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 Encore
   .setOutputPath('docs/build/front/')
   .setPublicPath('/build/front')
-  .copyFiles({
+  .copyFiles([{
     from: './assets/front/zeus-assets',
     to: 'images/[path][name].[ext]',
-  })
+  },{
+    from: './assets/front/images',
+    to: 'images/[path][name].[ext]',
+  }])
   /*
    * ENTRY CONFIG
    *
